@@ -2,7 +2,7 @@
 
 A Claude Skill that transforms Claude into a systematic interview coach. Built from research with 30+ tech professionals on how they're using AI to land better jobs faster.
 
-**Featured in:** [Lenny's Newsletter - "You should be using AI to interview (here's how)"](LINK_TBD)
+**Featured in:** [Lenny's Newsletter - "You should be using AI to land your next job"](LINK_TBD)
 
 ---
 
@@ -10,14 +10,13 @@ A Claude Skill that transforms Claude into a systematic interview coach. Built f
 
 Instead of generic interview advice, this skill gives you:
 
-- **Story mining** that extracts interview stories from your experience through conversation (no pre-formatted STAR required)
-- **Story surgery** to diagnose and strengthen weak stories (add metrics, sharpen your role, inject conflict)
-- **Company-specific prep** with predicted questions, competitive positioning, and strategic counters
-- **Transcript analysis** that scores harshly across multiple dimensions (no sycophantic praise)
-- **Practice drills**: constraint ladder, adversarial follow-ups, interruption handling, recovery tactics
-- **Rejection debriefs** that extract actionable lessons when you don't get the job
-- **Weekly reviews** that surface patterns and keep you focused on what matters
-- **Differentiation coaching** to escape the "AI-polished middle" where everyone sounds the same
+* **Slash commands** for instant access to any feature (`/prep`, `/analyze`, `/practice`, `/hype`, and more)
+* **LinkedIn integration** that enriches your profile and analyzes your interviewers
+* **Company-specific prep** with predicted questions, competitive positioning, and strategic counters
+* **Transcript analysis** that scores harshly across multiple dimensions (no sycophantic praise)
+* **Practice drills**: constraint ladder, adversarial follow-ups, interruption handling, recovery tactics
+* **Storybank management** to track, improve, and retire your interview stories
+* **Differentiation coaching** to escape the "AI-polished middle" where everyone sounds the same
 
 ---
 
@@ -25,11 +24,11 @@ Instead of generic interview advice, this skill gives you:
 
 ### Option 1: Claude Pro ($20/month) - Recommended
 
-1. Download the `.skill` file from [Releases](../../releases)
+1. Download the skill files from this repo (or clone it)
 2. In Claude, create a new Project called "Interview Coach"
-3. Go to Project Settings → Skills → Upload the `.skill` file
+3. Go to Project Settings → Skills → Upload the skill files
 4. Upload your resume to the project
-5. Start a conversation: "Help me set up my interview coach"
+5. Type: `/setup`
 
 ### Option 2: Claude Free
 
@@ -37,9 +36,29 @@ Instead of generic interview advice, this skill gives you:
 2. In Claude, create a new conversation
 3. Paste the SKILL.md content at the start
 4. Upload your resume
-5. Say: "Help me set up my interview coach"
+5. Type: `/setup`
 
-*Note: Free tier won't retain context between conversations. You'll need to re-paste the skill and re-upload your resume each session.*
+*Note: Free tier won't retain context between conversations. You'll need to re-paste the skill each session.*
+
+---
+
+## Slash Commands
+
+Type any of these commands at any time:
+
+| Command | What it does |
+|---------|--------------|
+| `/setup` | Initial setup — gather resume, LinkedIn, target role, preferences |
+| `/prep [company]` | Generate a 1-page prep brief for a specific company/role |
+| `/analyze` | Score and analyze an interview transcript |
+| `/practice` | Open the practice drill menu |
+| `/stories` | Review or add to your storybank |
+| `/hype` | Pre-interview confidence boost (60-second hype reel) |
+| `/concerns` | Generate likely concerns about your background + counters |
+| `/questions` | Generate smart questions to ask your interviewers |
+| `/thankyou` | Draft a post-interview thank you note |
+| `/progress` | Review your patterns and improvement areas |
+| `/help` | Show all available commands |
 
 ---
 
@@ -47,91 +66,80 @@ Instead of generic interview advice, this skill gives you:
 
 ### First Time Setup
 
-Upload your resume and tell Claude your target role. That's it.
+Type `/setup`. Upload your resume and LinkedIn profile URL. Tell Claude your target role. That's it.
 
-**Don't have your stories ready in STAR format?** Most people don't. Say "Help me find stories" and Claude will extract them through conversation, asking questions like "Tell me about a project that almost failed" and building the structure for you.
+**Why LinkedIn?** It provides richer context than a resume alone—career narrative, endorsements, recommendations, and how you present yourself publicly.
 
 ### Before an Interview
 
-> "I have an interview at Stripe for Senior Product Manager. Here's the job description: [paste JD]"
+```
+/prep Stripe
+```
 
-Claude generates:
-- What Stripe optimizes for (based on JD + values)
-- Competitive positioning (what the median candidate will say, how to differentiate)
-- 7-10 predicted questions with confidence levels and sources
-- Concerns about your background + how to counter them
-- Non-generic questions to ask them
+Then share the job description. Claude generates:
+
+* What they optimize for (based on JD + values)
+* Your unique positioning
+* 7-10 predicted questions
+* Concerns about your background + how to counter them
+* Non-generic questions to ask them
+* **Know Your Interviewer cards** (if you share interviewer LinkedIn profiles)
 
 ### After an Interview
 
-> "Here's my interview transcript from today. How did I do?"
+```
+/analyze
+```
+
+Paste your transcript (use [Granola](https://granola.ai), [Otter](https://otter.ai), or [Tactiq](https://tactiq.io) to capture interviews).
 
 Claude analyzes from multiple perspectives:
-- Hiring manager (would they advance you?)
-- Skeptical specialist (where did you lack depth?)
-- Values alignment (which principles did you miss?)
-- Calibration (verbosity, hedging, jargon density)
 
-You get a one-page "delta sheet" with exactly what to fix. **Expect harsh scores.** A 3/5 is average. Most answers are 2-3.
+* Hiring manager (would they advance you?)
+* Skeptical specialist (where did you lack depth?)
+* Values alignment (which principles did you miss?)
+* Calibration (verbosity, hedging, jargon density)
 
-### If You Get Rejected
-
-> "I didn't get the job. Here's what happened..."
-
-Claude runs a structured debrief:
-- Stage-based diagnosis (where in the funnel did you fail?)
-- Pattern recognition (is this a recurring issue?)
-- Specific gap identification
-- Concrete next actions
+You get a one-page "delta sheet" with exactly what to fix. **Expect harsh scores.** A 3/5 is average.
 
 ### Practice Mode
 
-> "Let's practice."
+```
+/practice
+```
 
 Options include:
-- **Constraint ladder**: Same story at 15s, 45s, 90s, 3min
-- **Adversarial follow-ups**: Skeptical challenges to your stories
-- **Recovery tactics**: Practice handling questions you can't answer well
-- **Interruption drill**: Maintain your thread when cut off mid-answer
-- **Role-specific drills**: PM six-lens test, Engineering depth test, etc.
 
-### Strengthen Weak Stories
-
-> "This story feels thin. Help me improve it."
-
-Claude diagnoses what's missing and helps you:
-- Add quantification (even rough estimates)
-- Sharpen your specific role (what did YOU do?)
-- Inject conflict (what resistance did you face?)
-- Combine with other experiences
-- Find third-party validation
-
-### Weekly Review
-
-> "Run my weekly review"
-
-Claude surfaces:
-- Score trends across dimensions
-- Recurring failure modes
-- Overused vs. underused stories
-- This week's focus area and specific drill assignment
+* `/practice ladder` — Same story at 15s, 45s, 90s, 3min
+* `/practice pushback` — Adversarial follow-ups to your stories
+* `/practice role` — Deep pressure test for your function
+* `/practice panel` — Mock panel with different interviewer types
+* `/practice pivot` — Handle interruptions and topic shifts
 
 ### Pre-Interview Boost
 
-> "I have an interview in 30 minutes."
+```
+/hype
+```
 
-Claude provides:
-- 60-second "hype reel" of your wins (read aloud for confidence)
-- 3x3 sheet (3 likely concerns + counters, 3 questions to ask)
-- Energy calibration check
+Get a 60-second "hype reel" of your wins to read aloud, plus a 3x3 sheet (3 likely concerns + counters, 3 questions to ask).
+
+### Manage Your Stories
+
+```
+/stories
+```
+
+View, add, improve, or retire stories in your storybank. Claude tracks which stories you've used, how they performed, and when to retire them.
 
 ---
 
 ## What's Included
 
 ```
-interview-coach/
-├── SKILL.md                     # Core coaching instructions
+interview-coach-skill/
+├── SKILL.md                     # Core coaching instructions with slash commands
+├── interview-coach.skill        # Skill manifest file
 └── references/
     ├── rubrics-detailed.md      # Full 1-5 scoring scales
     ├── role-drills.md           # PM, Eng, Design, Data Science, Research, Ops, Marketing drills
@@ -145,67 +153,62 @@ interview-coach/
 ## Two Tracks: Quick Prep vs Full System
 
 **Quick Prep** (~30 min per interview)
-- Company prep brief
-- Basic transcript scoring
-- Key improvements to focus on
+
+* Company prep brief
+* Basic transcript scoring
+* Key improvements to focus on
 
 **Full System** (~2-3 hours initially, then compounds)
-- Story mining and surgery
-- Storybank with gap analysis
-- Multi-lens scoring from 4 perspectives
-- Rejection debriefs
-- Recovery tactics practice
-- Weekly reviews with pattern recognition
-- Differentiation coaching
 
-Choose your track during setup. You can upgrade later.
+* Storybank with gap analysis
+* Multi-lens scoring from 4 perspectives
+* Pattern tracking across interviews
+* Weekly reviews with trend analysis
+* Differentiation coaching
+
+Choose your track during `/setup`. You can upgrade later.
 
 ---
 
 ## Tips for Best Results
 
-1. **Upload your actual resume** - The more context Claude has, the better the coaching
-
-2. **Share real transcripts** - Use [Granola](https://granola.ai), [Otter](https://otter.ai), or [Tactiq](https://tactiq.io) to capture interviews
-
-3. **Expect harsh feedback** - The skill defaults to critical. If everything sounds great, you're not learning.
-
-4. **Run weekly reviews** - During active job search, this surfaces patterns you won't notice yourself
-
-5. **Practice recovery tactics** - Everyone gets stumped. The skill helps you handle it gracefully.
-
-6. **Debrief every rejection** - Most people skip this because it's painful. Don't.
+1. **Share your LinkedIn** — Richer context = better coaching
+2. **Share interviewer profiles** — Get "Know Your Interviewer" cards with rapport builders and likely focus areas
+3. **Use real transcripts** — Recording your interviews is the fastest way to improve
+4. **Expect harsh feedback** — The skill defaults to critical. A 3/5 is average.
+5. **Use slash commands** — They're faster than explaining what you want
 
 ---
 
 ## Frequently Asked Questions
 
 **Q: Does this work for non-tech roles?**
-A: The core coaching (prep briefs, transcript analysis, story mining, recovery tactics) works for any role. The role-specific drills currently cover PM, Engineering, Design, Data Science, Research, Operations, and Marketing.
+A: The core coaching works for any role. The role-specific drills currently cover PM, Engineering, Design, Data Science, Research, Operations, and Marketing.
 
 **Q: Can I use this with ChatGPT or Gemini?**
-A: The skill is designed for Claude, but you can adapt the prompts. Copy relevant sections from SKILL.md and reference files into your preferred AI.
-
-**Q: How is this different from just asking ChatGPT for interview help?**
-A: Four ways: (1) It's a system, not one-off prompts—context persists across sessions; (2) It scores harshly against explicit rubrics, not vibes; (3) It extracts stories through conversation instead of expecting them pre-formatted; (4) It tracks patterns over time and holds you accountable.
+A: The skill is designed for Claude, but you can adapt the prompts. Copy relevant sections from SKILL.md into your preferred AI.
 
 **Q: Why is the feedback so harsh?**
-A: Because sycophantic praise doesn't help you improve. The candidates who landed jobs in our research explicitly asked AI to be adversarial. The skill defaults to that mode.
+A: Because sycophantic praise doesn't help you improve. The candidates who landed jobs in our research explicitly asked AI to be adversarial.
 
 **Q: Is it ethical to use AI for interview prep?**
-A: Using AI to prepare is no different than using books, coaches, or mock interviews. The skill helps you articulate your real experiences better—it doesn't fabricate credentials. See the ethics section in the [full article](LINK_TBD) for nuanced discussion.
+A: Using AI to prepare is no different than using books, coaches, or mock interviews. The skill helps you articulate your real experiences better—it doesn't fabricate credentials.
+
+---
+
+## What's New in v2
+
+* **Slash commands** — Instant access to any feature
+* **LinkedIn integration** — Richer candidate profiles, interviewer analysis
+* **Know Your Interviewer cards** — Background overlap, likely focus areas, rapport builders
+* **Practice sub-commands** — `/practice ladder`, `/practice pushback`, etc.
+* **Storybank management** — `/stories` menu for viewing, adding, improving, retiring
 
 ---
 
 ## Contributing
 
 Found a bug? Have a suggestion? Open an issue or PR.
-
-Ideas for future versions:
-- Industry-specific prep (healthcare, fintech, etc.)
-- More role-specific drills
-- Integration with calendar for interview reminders
-- Export to Notion/spreadsheet templates
 
 ---
 
