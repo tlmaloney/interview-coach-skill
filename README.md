@@ -26,16 +26,33 @@ This skill is command-driven with conditional logic: after scoring, it branches 
 
 ---
 
-## Quick Start (5 minutes)
+## Quick Start
 
 ### Option 1: Claude Code — Terminal or IDE (recommended)
 
-1. Clone this repo.
-2. `cp SKILL.md CLAUDE.md`
-3. Open the directory in Claude Code (terminal or app) or Cursor.
-4. Run `/kickoff`.
+**Get the files** — either way works:
 
-`CLAUDE.md` auto-loads the skill. It reads reference files on demand and writes `coaching_state.md` to maintain continuity across sessions — no manual saving required.
+```bash
+# Clone with git
+git clone https://github.com/noamseg/interview-coach-skill.git
+cd interview-coach-skill
+```
+
+Or: click the green **Code** button on GitHub → **Download ZIP**, unzip it, and open the folder.
+
+**Activate the skill:**
+
+```bash
+cp SKILL.md CLAUDE.md
+```
+
+This creates the file that Claude Code auto-loads. (`SKILL.md` is the source — `CLAUDE.md` is your working copy.)
+
+**Start coaching:**
+
+Open the folder in Claude Code (terminal, Claude App, or Cursor) and run `/kickoff`.
+
+The skill reads its reference files on demand and writes a `coaching_state.md` file to maintain continuity across sessions — no manual saving required.
 
 **Works with**: Claude Code (terminal), Claude Code (Claude App), Cursor, or any environment with file system access.
 
