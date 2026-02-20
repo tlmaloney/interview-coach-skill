@@ -158,3 +158,181 @@ These examples show what good skill output looks like. Use them as calibration a
 - Preserved the 30% fee reduction but made it specific (32%, $1.3M annualized) → approximations with context > round numbers
 
 **Note**: The candidate would need to supply the actual numbers (the $4M, $130K, 32%, $1.3M, and CFO detail). The rewrite shows *where* specificity belongs and *what kind* of detail transforms a 3 into a 5. If they don't have exact numbers, approximations with caveats ("roughly $4M/month") are far better than no numbers at all.
+
+---
+
+## Example 5: Kickoff Summary Showing Interview History Shaping Coaching Plan
+
+**Context**: Mid-career PM, currently interviewing at 2 companies. Has done 3 interviews in the past month — advanced past one phone screen, rejected from two first rounds. Provided resume and target companies.
+
+```markdown
+## Kickoff Summary
+- Track: Full System
+- Target Role(s): Senior PM
+- Seniority band: Mid-career (6 years experience)
+- Timeline: Active — interviews this week and next
+- Interview history: Active but not advancing (1/3 advance rate, both rejections at first round)
+- Feedback Directness: 4
+- Time-aware coaching mode: Focused
+
+## Profile Snapshot (from resume analysis)
+- Positioning strengths: Strong B2B SaaS trajectory, two promotions in 3 years at current company, owned a product line generating $8M ARR
+- Likely interviewer concerns: No consumer product experience (both target companies have consumer-facing products); current title is "PM" not "Senior PM" — may need to demonstrate seniority through scope, not title
+- Career narrative gaps: Transition from engineering (first 2 years) to product isn't explained — interviewers will ask, and you need a crisp 30-second version ready
+- Story seeds: "Launched enterprise billing platform" bullet likely has a rich prioritization story; "Reduced churn by 18%" probably has a customer-insight story behind it
+
+## Interview Readiness Assessment
+Based on interview history and profile:
+- Current readiness: Has foundation but gaps — advancing past some screens but not consistently
+- Biggest risk going in: First-round rejections suggest either Relevance (answering the wrong question) or Structure (losing the thread). We need data to diagnose which.
+- Biggest asset going in: Real quantified outcomes on resume — the raw material for strong stories exists
+
+## First Plan
+Your rejection pattern suggests a specific bottleneck — let's find it fast.
+
+### Immediate (this session)
+1. Build initial storybank with `stories` — capture 6-8 stories from your resume bullets, focusing on the enterprise billing and churn reduction experiences
+
+### This week
+2. Run `prep` for your nearest interview to sharpen question prediction and story mapping
+3. Run `practice ladder` — if Structure is the bottleneck (my hypothesis from first-round rejections), this will surface it in one session
+
+### Before next interview
+4. If you have a transcript from any rejected interview, run `analyze` — that's the fastest way to diagnose exactly what's not landing
+
+**Next commands**: `stories`, `prep [company]`, `practice ladder`, `help`
+```
+
+**Why this example matters**: Notice how interview history (active but not advancing, first-round rejections) shapes the entire plan. A first-time interviewer would get storybank building and fundamentals. This candidate gets a diagnostic approach — find the bottleneck fast because they're already in active loops.
+
+---
+
+## Example 6: Prep Brief Excerpt Showing Format-Specific Coaching
+
+**Context**: Senior Engineer preparing for a system design interview at a growth-stage startup. Format discovered through recruiter: 50-minute live verbal walkthrough, collaborative (interviewer participates), one problem.
+
+```markdown
+## Prep Brief: TechCo — Senior Software Engineer
+
+## Interview Format
+- Identified format: System design / case study (verbal walkthrough, collaborative)
+- Format source: Candidate confirmed with recruiter — 50 min, one problem, collaborative with senior engineer
+- Format-specific guidance: Collaborative formats reward thinking out loud and engaging with the interviewer's suggestions. Treat them as a partner, not an audience. Ask clarifying questions early, propose your approach, and invite feedback: "Does this direction make sense, or should I consider a different angle?"
+- Scoring weight adjustments for this format: Structure + Substance weighted highest. Credibility scored on process rigor, not answer correctness.
+- Coaching scope: I'll help you practice structuring your thinking visibly, scoping problems before diving in, narrating tradeoffs, and engaging with probing questions. I won't evaluate the technical correctness of your designs — for that, practice with a senior engineer peer.
+
+## Company Culture Read
+- Known culture signals: Careers page emphasizes "pragmatic engineering" and "shipping over perfection" (Tier 1 — from their careers page)
+- What this company rewards in interviews: Based on the JD's emphasis on "end-to-end ownership" and "working in ambiguity," they likely value candidates who can make decisions with incomplete information and explain their reasoning (Tier 1 — from JD)
+- What to avoid: Over-engineering in the system design. Their careers page mentions "right-sized solutions" twice — don't propose Google-scale architecture for a growth-stage problem.
+- What I don't know: Specific evaluation rubric, whether they use a scoring sheet, how much weight they put on system design vs. other rounds
+- Confidence in culture read: Medium
+- Sources used: Company careers page, JD, candidate input from recruiter conversation
+```
+
+**Why this example matters**: Shows how coaching scope boundaries appear naturally inside a prep brief — not as a disclaimer, but as a clear statement of what this coaching session can and can't deliver. Also demonstrates tiered sourcing (Tier 1 labels on every claim).
+
+---
+
+## Example 7: Mock Debrief Excerpt Showing Holistic Arc Analysis
+
+**Context**: Mid-career PM, mock behavioral screen (5 questions), targeting Series B startup.
+
+```markdown
+## Mock Interview Debrief: Behavioral Screen — GrowthCo PM
+
+## Overall Impression
+- Hiring signal: Mixed
+- One-sentence summary: Strong individual answers but the full interview felt like five separate stories rather than a cohesive narrative about who you are as a PM.
+
+## Arc Analysis
+- Energy trajectory: Started high → Ended medium. Your first two answers had genuine enthusiasm; by Q4 you sounded like you were reciting. The energy dip was visible.
+- Story diversity: 4 unique stories across 5 questions (S003 used twice — for prioritization and for conflict)
+- Pacing: Front-loaded. First two answers were 90 seconds each (ideal). Last two crept to 3+ minutes. The interviewer would notice.
+- Answer length distribution: Erratic — 85 words, 110 words, 280 words, 320 words, 190 words. The middle answers ballooned.
+
+## Holistic Patterns (things only visible across the full interview)
+- Repeated crutch phrases: "At the end of the day" appeared in 4 of 5 answers. "So basically" appeared in 3. These become invisible to you but very visible to the interviewer.
+- Topics avoided: No answer mentioned failure, disagreement with a manager, or something that went wrong. Five stories, all successes. An interviewer would wonder: "Does this person only tell me what went right?"
+- Questions that caused visible hesitation: Q4 ("Tell me about a time you failed") — you hesitated, then told a success story with a minor setback. This is a red flag for self-awareness.
+- Best moment of the interview: Q2, where you described killing a feature despite sales pressure. The earned secret about small-scale success being a political trap was memorable.
+- Worst moment and recovery quality: Q4. You didn't recover — the answer wandered and never landed a clear takeaway. Recovery: poor.
+
+## Signal Reading Notes
+- Q1: Follow-up indicated interest ("Tell me more about the data you used") — positive signal
+- Q3: Interviewer moved on quickly after your answer — likely negative, your impact statement was vague
+- Q4: Interviewer rephrased the question ("I mean a real failure, not just a challenge") — your first answer didn't land
+
+## Interviewer Perspective
+- "When you used S003 for both the prioritization and conflict questions, I noticed. It made me wonder if you have a limited range of experiences to draw from. In a real interview, I'd probe: 'Can you give me a different example?'"
+- "On Q4, I rephrased because your answer was about overcoming a challenge, not about failing. When a candidate can't name a real failure, I worry about self-awareness and honesty."
+- "Your Q2 answer was the one I'd bring to the hiring committee. The earned secret about features becoming politically unkillable at small scale — that stuck with me."
+
+## Top 3 Changes for Next Mock
+1. Prepare a genuine failure story. Not a "challenge I overcame" — a real mistake with real consequences and a real lesson. Run `stories add` and specifically mine for failure experiences.
+2. Practice ending answers. Your last sentence should be a clear takeaway, not a trail-off. Use the constraint ladder to practice the last 15 seconds of each story.
+3. Vary your stories. You have 8 stories in your storybank — use them. If you catch yourself reaching for S003 again, force yourself to pick a different one.
+
+**Next commands**: `stories add`, `practice ladder`, `mock behavioral`
+```
+
+**Why this example matters**: Demonstrates the holistic patterns only visible across a full mock — story recycling, energy trajectory, crutch phrases, topic avoidance. Individual answer scoring misses these. Also shows the Interviewer Perspective section that teaches signal-reading.
+
+---
+
+## Example 8: Progress Review Showing Trend Narration
+
+**Context**: Senior Designer, 5 sessions completed, 2 real interviews (1 advanced, 1 rejected). Running `progress` after 5th session.
+
+```markdown
+## Progress Snapshot
+- Sessions analyzed: 5
+- Real interviews completed: 2
+- Real interview outcomes: 1 advanced / 1 rejected / 0 pending
+- Current trend: Improving (with one plateau)
+
+## Your Trajectory
+
+- Substance: 2.5 → 3.0 → 3.5 → 3.5 → 4.0 — Steady climb. The jump from 2.5 to 3.0 happened in session 2 when you started adding user research numbers to your stories instead of just saying "we did research." The plateau at 3.5 broke in session 5 when you added alternatives-considered framing ("We tested three approaches..."). Keep doing that — it's working.
+
+- Structure: 3.0 → 3.0 → 3.5 → 4.0 → 4.0 — This was your first plateau and your first breakthrough. Structure didn't move until you practiced the constraint ladder in session 3. Once you learned to front-load the headline, everything tightened. You're now consistent at 4 — this is no longer a priority.
+
+- Relevance: 3.5 → 3.5 → 4.0 → 4.0 → 4.0 — Started strong, now solid. Your question-decoding improved naturally as Structure improved — once you knew where the answer was going, you stopped adding irrelevant context. No further action needed here.
+
+- Credibility: 2.0 → 2.5 → 3.0 → 3.0 → 3.5 — The slowest climber. Your root cause: modesty. You consistently undersell your individual contribution. The I/we audit in session 3 helped (2.5 → 3.0), but you've slipped back into "we" framing in the last two sessions. This needs active monitoring.
+
+- Differentiation: 2.0 → 2.0 → 2.5 → 3.0 → 3.5 — This didn't move at all until session 4, when we extracted your first earned secret ("The best design systems are built from constraints, not inspiration"). That was the unlock. You now have 3 earned secrets across your storybank. The next level (4+) requires weaving them into your answers naturally — right now they feel bolted on.
+
+## Self-Assessment Calibration
+- Your average self-ratings vs. my scores:
+  - Substance: You 3.8 / Me 3.5
+  - Structure: You 3.5 / Me 3.7
+  - Relevance: You 3.8 / Me 3.9
+  - Credibility: You 3.5 / Me 2.8
+  - Differentiation: You 2.5 / Me 2.6
+- Pattern: Over-rater on Credibility (by 0.7 — significant gap)
+- What this means: You think your individual contribution is coming through more clearly than it actually is. This is consistent with the modesty pattern — you believe you're claiming credit, but the interviewer isn't hearing it. The gap between your perception and reality on this dimension is the single most important thing to close.
+
+## Graduation Check
+- Interview-ready criteria: 4 of 6 met
+  - [x] 3+ scores of 4+ across dimensions (Substance, Structure, Relevance all hit 4)
+  - [x] No dimension consistently below 3 (all at 3+)
+  - [ ] 8+ stories, 5+ rated 4+ strength (you have 7 stories, only 3 at 4+)
+  - [x] Critical competency gaps covered
+  - [ ] Gap questions handled in practice (not yet tested)
+  - [x] Self-assessment calibrated within 0.5 (except Credibility — flagged above)
+- Assessment: Almost ready — two gaps to close before your next round
+
+## Top 2 Priorities (Next 2 Weeks)
+1. Priority: Close the Credibility gap — I/we audit on your top 5 stories
+   Why: Your self-assessment is 0.7 points off on this dimension, and the real interview rejection feedback ("hard to tell what she specifically did") confirms it
+   Drill: I/we audit + constraint practice on your 3 weakest-Credibility stories
+   Success metric: Credibility ≥ 3.5 in next practice with self-assessment within 0.3 of coach score
+
+2. Priority: Add 2 more stories to storybank and extract earned secrets
+   Why: 7 stories with only 3 at 4+ isn't enough for a competitive process. You need at least 5 at 4+ to have options.
+   Drill: `stories add` focusing on failure/learning experiences (your storybank has zero)
+   Success metric: 9+ stories, 5+ at 4+ strength, at least 1 failure story
+```
+
+**Why this example matters**: Shows trend narration as a story, not a spreadsheet. Each dimension gets a narrative arc with inflection points, causes, and next unlocks. The self-assessment calibration section reveals the most actionable insight (Credibility over-rating by 0.7 = the candidate thinks they're claiming credit but they're not). The graduation check makes readiness concrete.

@@ -512,6 +512,79 @@ When running a panel drill:
 
 ---
 
+## High-Pressure Stress Drill (`practice stress`)
+
+This drill simulates the worst-case version of an interview — multiple stressors layered simultaneously. It's the final stress test before the real thing. Only run after the candidate has passed Stages 1-5 in the progression ladder.
+
+**Purpose**: Build resilience when everything goes wrong at once. Real interviews don't stress-test one dimension at a time — they combine time pressure, skepticism, unexpected questions, and format curveballs simultaneously.
+
+### Setup
+
+1. **Pull the candidate's weakest patterns** from `coaching_state.md` — Active Patterns, Score History, and Revisit Queue. The stress drill should target known vulnerabilities, not random pressure.
+2. **Select the role-specific drill** that matches their target (PM Six-Lens, Engineer Technical Depth, etc.). The stress drill layers pressure *on top of* the role-specific content.
+3. **Set the frame**: "This is the hardest drill I'll throw at you. It's designed to break your composure so we can see what happens when things go sideways. Don't try to be perfect — try to recover."
+
+### Stress Layers (apply 3-4 simultaneously)
+
+| Stressor | How to Apply | What It Tests |
+|---|---|---|
+| **Time compression** | "You have 60 seconds for this answer." Apply to questions that normally take 2-3 minutes. | Prioritization under pressure — can they find the headline fast? |
+| **Hostile interviewer** | Combine the Skeptic and Time-Pressured Exec archetypes. Interrupt early, challenge every claim, show impatience. | Composure and defensiveness management |
+| **Curveball sequencing** | Ask a question from a completely different domain mid-flow. Go from behavioral to "What's your biggest weakness?" to technical without transition. | Cognitive flexibility and recovery speed |
+| **Information denial** | When they ask clarifying questions, say "I can't tell you that — just go with your best judgment." Repeatedly. | Comfort with ambiguity and assumption transparency |
+| **Previous-answer callback** | Reference something they said 3 questions ago and challenge it: "Earlier you said X, but now you're saying Y — which is it?" | Consistency and composure when caught in a contradiction (real or perceived) |
+| **Silence after answer** | After their response, wait 5+ seconds. Say nothing. Then: "Is that your final answer, or do you want to add anything?" | Resistance to panic-filling silence |
+
+### Protocol
+
+1. Run 4-5 questions with 3-4 stressors active per question. Vary which stressors are applied.
+2. Do NOT debrief between questions — maintain pressure throughout, like a real interview.
+3. After the full sequence, give the candidate 30 seconds of silence before debriefing. They need to decompress.
+4. **Debrief the recovery, not the content.** The point isn't whether their answers were perfect — it's how they handled the pressure:
+   - Where did composure hold? Where did it break?
+   - What was their recovery time after a bad moment? (Instant? One question? Never recovered?)
+   - Did stress make them verbose or clipped? (Both are failure modes)
+   - Did they maintain their Structure scores under pressure, or did narrative architecture collapse first?
+
+### Scoring Per Round
+
+- Composure maintenance (stays grounded vs. spirals): 1-5
+- Recovery speed (bounces back vs. carries bad energy forward): 1-5
+- Content quality under pressure (substance holds vs. goes hollow): 1-5
+
+### Role-Specific Stress Variants
+
+- **PM**: Layer Business Lens + Skeptic Lens challenges simultaneously. Add a "the CEO just asked about this in the hallway" urgency framing.
+- **Engineer**: Ask them to explain a technical decision to a non-technical exec, then immediately pivot to a deep technical probe from a senior engineer persona. Test register-switching under time pressure.
+- **Designer**: Present harsh design critique mid-answer: "Our users wouldn't use this." Test whether they get defensive or curious.
+- **Data Scientist**: Challenge statistical methodology with a pointed "But couldn't you have just..." question that proposes a simpler approach. Test whether they defend rigor without being dismissive.
+- **Operations**: Introduce a new constraint mid-answer that invalidates their approach: "Actually, the timeline just got cut in half." Test real-time re-planning.
+- **Marketing**: Challenge attribution claims aggressively: "How do you know it wasn't just seasonal?" Layer with "And the budget for this was how much?"
+
+---
+
+## Difficulty Scaling Guide
+
+Within each role drill, questions range from entry-level to advanced. Use this guide to calibrate which questions to deploy at each stage of the candidate's progression.
+
+### How to Scale
+
+- **Warm-up (rounds 1-2)**: Start with open-ended questions that let the candidate choose their best material. Lower dimensions: "Walk me through...", "Tell me about..."
+- **Moderate (rounds 3-4)**: Add specificity and constraints. "Walk me through the unit economics" is harder than "How'd this impact revenue?" Force them to show depth, not just breadth.
+- **Advanced (rounds 5+)**: Deploy the hardest questions in each lens — the ones that expose gaps. Skeptic Lens questions, compound challenges ("Your metrics look cherry-picked AND your timeline seems aggressive"), and questions that require admitting uncertainty.
+
+### Role-Specific Difficulty Markers
+
+**PM Six-Lens**: Engineering and Data lenses are typically hardest for PMs — deploy those later. Business Lens questions escalate from "How'd this impact revenue?" (moderate) to "Walk me through the unit economics" (advanced) to "What was the opportunity cost vs. the next best project?" (expert).
+
+**Engineer Technical Depth**: Architecture and Edge Cases escalate most steeply. "What happens at 10x scale?" (moderate) → "What happens at 100x with half the infrastructure budget?" (advanced) → "Walk me through the failure mode when [component] and [component] both fail simultaneously" (expert).
+
+**Designer Critique**: Research Foundation questions are the warmup. Constraints and Accessibility escalate from "How did you work within brand guidelines?" (moderate) to "The engineering team says this is impossible to build. What do you do?" (advanced).
+
+**Data Scientist Methodology**: Problem Framing is the warmup. Evaluation and Methodology escalate from "What metrics did you optimize for?" (moderate) to "How did you prevent overfitting given your sample size?" (advanced) to "Your approach assumes stationarity — what breaks if that doesn't hold?" (expert).
+
+---
+
 ## General Drill Guidelines
 
 1. **Start easier, escalate**: Begin with straightforward questions, increase difficulty based on how well they handle early ones.

@@ -278,6 +278,15 @@ Don't guess. Help them find out:
 
 If they can't find out, default to a verbal walkthrough format (the most common and most coachable variant) and flag: "I'm defaulting to a verbal walkthrough format since we don't know the specifics. If you learn more about the format, tell me — it'll change how we prep."
 
+#### Saving Discovered Format
+
+After running Format Discovery, save the format details to `coaching_state.md` so subsequent commands don't re-ask:
+
+- **In Profile** (general): Update the `Known interview formats` field with any new format types discovered.
+- **In Interview Loops** (company-specific): Under the relevant company entry, add: `- Format: [discovered format details — e.g., "System design: 50 min verbal walkthrough, collaborative, one problem, with senior engineer"]`
+
+This prevents re-running discovery when the candidate later runs `mock`, `practice technical`, or `hype` for the same company.
+
 #### Format Variability Acknowledgment
 
 When coaching for these formats, be explicit that your guidance is adapted to what the candidate has described, not to insider knowledge of the company's process: "I'm working from what you've told me about the format. If anything is different on the day, the communication skills we're building — thinking out loud, asking clarifying questions, articulating tradeoffs — transfer regardless of the exact setup."
@@ -478,6 +487,15 @@ When the candidate provides interviewer LinkedIn URLs or profile links, analyze 
 ## `analyze` - Transcript Analysis Workflow
 
 Use `references/transcript-processing.md` as execution guide.
+
+### Cold Start (No Coaching State)
+
+If a candidate drops a transcript without having run `kickoff` first, don't refuse or force kickoff — but collect the minimum needed for a useful analysis:
+
+1. **Infer what you can from the transcript.** The questions asked often reveal role type, seniority level, and company culture. Note these inferences explicitly: "Based on the questions, this looks like a mid-career PM behavioral screen."
+2. **Ask for two things before scoring**: (a) "What seniority level are you targeting? This affects how I calibrate scores." (b) "What role/company is this for? Even brief context helps me assess Relevance."
+3. **Proceed with analysis.** Use inferred or stated seniority band for calibration. Skip story-mapping sections (no storybank exists). Skip cross-referencing with prep data.
+4. **After the analysis, suggest kickoff**: "I've scored this transcript, but I'm working without your full context — no storybank, no coaching history, no target company profile. If you want to get the most from this system, run `kickoff` to set up your coaching profile. Your analysis scores will carry forward."
 
 ### Step Sequence
 
@@ -794,6 +812,34 @@ The first round of every practice session is explicitly **unscored**. Its purpos
 - Try this single change:
 ```
 
+### `practice technical` — Session Protocol
+
+When the candidate runs `practice technical`, don't just throw all four drills at them. Run a structured session:
+
+1. **Check coaching state.** Does the candidate have a system design or technical+behavioral mix interview coming up? If so, tailor drill scenarios to their target company and role. If not, use generic scenarios.
+2. **Check Format Discovery data.** If the candidate has previously described their specific interview format (stored in coaching state Interview Loops or Profile), reference it: "You told me your system design round is a collaborative verbal walkthrough. I'll tailor the drills to that format."
+3. **Select 1-2 drills per session.** Don't run all four — a 30-minute session covering Thinking Out Loud + Clarification-Seeking is better than a shallow pass through all four. Selection logic:
+   - **First session**: Start with Clarification-Seeking (most common failure mode — jumping to solutions without scoping). Follow with Thinking Out Loud.
+   - **If preparing for technical+behavioral mix**: Prioritize Mode-Switching drill.
+   - **If the candidate's recent practice/analyze scores show weak tradeoff articulation**: Prioritize Tradeoff Articulation drill.
+   - **Subsequent sessions**: Rotate through whichever drills the candidate hasn't practiced, or revisit weak areas.
+4. **Run each drill following the protocol in `references/role-drills.md`** (Technical Communication Drills section). Use the role-specific scenario adaptations for the candidate's target role.
+5. **Debrief after each drill** using the standard Round Output Schema above.
+6. **End with integration note**: "These communication skills — scoping, narrating, articulating tradeoffs — transfer to every format variation. Even if the specific interview setup is different from what we practiced, the underlying skills are the same."
+
+### `practice stress` — Session Protocol
+
+The stress drill is the final test before a real high-stakes interview. See `references/role-drills.md` (High-Pressure Stress Drill section) for the full drill protocol, stress layers, and role-specific variants.
+
+**Session setup:**
+
+1. **Gate check.** Confirm the candidate has completed Stages 1-5 in the progression ladder. If not, flag it: "The stress drill is designed for candidates who've built a solid foundation. Your current stage is [X]. Want to work on [prerequisite drill] first, or push ahead anyway?" Respect their choice.
+2. **Pull weaknesses from coaching state.** The stress drill should target known patterns (from Active Patterns and Revisit Queue), not random pressure. Tell the candidate: "I'm designing this drill around your specific patterns — the places where you've been most vulnerable in practice."
+3. **Run 4-5 questions** with 3-4 stress layers active per question (see role-drills.md for the full layer menu).
+4. **Do NOT debrief between questions.** Maintain continuous pressure through the full sequence.
+5. **Post-drill debrief** focuses on recovery and composure, not content quality. Use the stress-specific scoring from role-drills.md.
+6. **Update coaching state**: Log the stress drill in Score History with type: practice/stress. Note composure and recovery scores alongside the standard 5-dimension scores.
+
 ---
 
 ## `stories` - Storybank Workflow
@@ -878,14 +924,7 @@ When adding or improving stories, force specificity on:
 
 ### Rapid-Retrieval Drill (`stories drill`)
 
-This drill trains instant story selection:
-
-1. Throw 10 interview questions in rapid succession (one at a time).
-2. For each question, candidate must respond within 10 seconds with: story ID + opening line.
-3. No perfect answers needed — this trains the retrieval reflex, not the delivery.
-4. After 10 rounds, debrief: which questions caused hesitation? Where did the candidate reach for the wrong story? Any gaps where no story fit?
-
-**Scoring**: Speed of retrieval (instant / hesitant / stuck), match quality (strong / partial / wrong story), opening line quality (hooks attention / generic / fumbled).
+See `references/storybank-guide.md` (Rapid-Retrieval Drill section) for the full protocol, scoring criteria, and progression rounds. In brief: 10 rapid-fire questions, 10 seconds each, candidate responds with story ID + opening line. Debrief focuses on retrieval gaps and hesitation patterns.
 
 ---
 
@@ -1091,6 +1130,15 @@ See Gap-Handling Framework — Pattern 1: Adjacent Bridge.
 ---
 
 ## `thankyou` - Follow-Up Workflow
+
+### Coaching State Integration
+
+Before drafting, check `coaching_state.md` for data that strengthens the thank-you:
+- **Interview Loops**: Pull interviewer names, round context, stories used, and signals observed from the most recent `debrief` entry.
+- **Interviewer Intelligence**: If interviewer profiles were researched during `prep`, reference shared interests or background to personalize the note.
+- **Storybank**: If `debrief` logged which stories were used and how they landed, use positive-signal stories as callback material ("I especially enjoyed discussing [topic from the story that landed well]").
+
+If no coaching state exists, ask the candidate for the callback material directly.
 
 ### Timing Guidance
 
@@ -1762,8 +1810,23 @@ Every prep system assumes you'll have a story for every question. You won't. Thi
 - Don't over-explain why you lack the experience (sounds defensive)
 - Don't use "we did X" to cover for personal gaps — interviewers catch this
 
+**Pattern Selection by Storybank Score:**
+
+When the storybank has been built, map gap response patterns to story strength scores:
+
+| Storybank Situation | Recommended Pattern | Why |
+|---|---|---|
+| **Story exists, strength 3+** | No gap-handling needed — use the story | The story is strong enough to deliver directly |
+| **Story exists, strength 2** | Pattern 1: Adjacent Bridge | The story has real content but isn't compelling enough to carry the answer. Bridge from the experience to the underlying principle — use the story as a springboard, not the centerpiece |
+| **Story exists, strength 1** | Pattern 3: Reframe to Strength or Pattern 4: Growth Narrative | The story is too thin to deliver. Better to honestly reframe than to deliver a weak story that hurts credibility |
+| **No story exists, adjacent experience available** | Pattern 1: Adjacent Bridge | You have real experience that's close — lead with that and draw the connection |
+| **No story exists, no adjacent experience** | Pattern 2: Hypothetical with Self-Awareness | Be honest, show your thinking process, and demonstrate learning orientation |
+| **Competency is a known development area** | Pattern 4: Growth Narrative | Turn the gap into a demonstration of self-awareness and proactive development |
+
+During `stories find gaps`, prescribe the specific pattern for each gap based on this mapping. During `practice gap`, drill the prescribed pattern under pressure.
+
 **Integration:**
-- During `stories find gaps`, flag questions where no story exists and prescribe which gap response pattern to prepare.
+- During `stories find gaps`, flag questions where no story exists and prescribe which gap response pattern to prepare (using the mapping above).
 - During `practice gap`, drill rapid gap-handling under pressure.
 - During `mock`, include at least one question designed to hit a known gap.
 
@@ -1831,3 +1894,84 @@ Non-native English speakers and candidates from different cultural backgrounds f
 
 **When Detected:**
 If scoring reveals patterns consistent with cultural communication differences (low Credibility despite strong content, low Structure despite clear thinking, consistent modesty in self-description), name it: "I think this might be a communication style difference rather than a skill gap. Let's work on adapting your natural style for this interview context, not replacing it."
+
+---
+
+## `help` - Command Reference Workflow
+
+### Logic
+
+When the user types `help`, generate a context-aware command guide — not just a static list.
+
+1. **Read `coaching_state.md`** to understand where the candidate is in their coaching journey.
+2. **Show the full command table** (from SKILL.md Command Registry).
+3. **Highlight the 2-3 most relevant commands right now** based on coaching state:
+   - If no coaching state exists: highlight `kickoff`
+   - If storybank is empty: highlight `stories`
+   - If an interview is scheduled within 48 hours: highlight `hype` and `prep`
+   - If transcripts exist but haven't been analyzed: highlight `analyze`
+   - If 3+ scored sessions exist: highlight `progress`
+   - If an offer was received: highlight `negotiate`
+   - If drill progression shows the candidate hasn't completed Stage 1: highlight `practice ladder`
+4. **Show current coaching state summary** (if it exists): track, seniority band, drill stage, number of stories, number of real interviews, and active company loops.
+5. **End with a prompt**: "What would you like to work on?"
+
+### Output Schema
+
+```markdown
+## Available Commands
+
+| Command | Purpose |
+|---|---|
+| `kickoff` | Initialize coaching profile |
+| `research [company]` | Lightweight company research + fit assessment |
+| `prep [company]` | Company + role prep brief |
+| `analyze` | Transcript analysis and scoring |
+| `debrief` | Post-interview rapid capture (same day) |
+| `practice` | Practice drill menu and rounds |
+| `mock [format]` | Full simulated interview (4-6 Qs) |
+| `stories` | Build/manage storybank |
+| `concerns` | Generate likely concerns + counters |
+| `questions` | Generate tailored interviewer questions |
+| `hype` | Pre-interview confidence and 3x3 plan |
+| `thankyou` | Thank-you note / follow-up drafts |
+| `progress` | Trend review, self-calibration, outcomes |
+| `negotiate` | Post-offer negotiation coaching |
+| `reflect` | Post-search retrospective + archive |
+
+## Where You Are Now
+[Brief coaching state summary — or "No coaching state found. Run `kickoff` to get started."]
+
+## Recommended Next
+Based on where you are:
+1. **[command]** — [why this is the highest-leverage move right now]
+2. **[command]** — [secondary recommendation]
+
+What would you like to work on?
+```
+
+---
+
+## Cross-Command Dependency Guide
+
+Commands produce better output when they have data from other commands. This table shows what each command can do with and without various pieces of coaching state. Use this to suggest prerequisites when a command would benefit from missing data.
+
+| Command | Works best with | Works without (with reduced quality) | Hard dependency (cannot run without) |
+|---|---|---|---|
+| `kickoff` | — | Everything — this is the entry point | — |
+| `research` | Profile from `kickoff` | Profile (gives generic fit assessment) | Company name |
+| `prep` | Storybank, coaching state profile, interviewer links | Storybank (can't do story mapping, flags the gap), profile (infers from JD) | Company + JD |
+| `analyze` | Coaching state (seniority band, storybank for story matching) | Seniority band (asks for it), storybank (skips story mapping) | Transcript |
+| `debrief` | Storybank (for Last Used updates), Interview Loops (for context) | Both (captures data without cross-referencing) | — |
+| `practice` | Score history (to set drill stage), storybank (for tailored questions), prep data (for company-specific drills) | All (uses generic questions, starts at Stage 1) | — |
+| `mock` | Prep data, storybank, score history, interviewer intel | All (uses generic questions and personas) | Format |
+| `stories` | Resume analysis from kickoff (for story seeds) | Resume (uses reflective prompts instead) | — |
+| `concerns` | Resume analysis, storybank, previous `analyze` results, JD | All (generates from candidate input only) | — |
+| `questions` | Prep data, interviewer intel, interview stage | All (generates generic questions) | — |
+| `hype` | Score history, storybank, prep brief, concerns | All (falls back to resume-based hype — explicitly flagged) | — |
+| `thankyou` | Debrief data, Interview Loops, interviewer intel | All (asks candidate for callbacks) | — |
+| `progress` | 3+ scored sessions, outcome data | Works with 1-2 sessions (reduced — see minimum data thresholds) | At least 1 scored session |
+| `negotiate` | Interview Loops, outcome log | Both (collects offer details fresh) | Offer details |
+| `reflect` | Full coaching state with score history and outcomes | Score history (narrates from limited data) | — |
+
+**How to use this**: When running a command that would benefit from missing data, mention the gap briefly and offer to fill it — don't refuse to run. Example: "I can run `prep` without a storybank, but I won't be able to map your stories to predicted questions. Want to build your storybank first with `stories`, or proceed and we'll do the mapping later?"

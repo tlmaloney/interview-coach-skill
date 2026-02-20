@@ -36,6 +36,10 @@ At the end of every session (or when the user says they're done, or after any ma
 1. Write the updated coaching state to `coaching_state.md`.
 2. Confirm: "Session state saved. I'll pick up where we left off next time."
 
+### Mid-Session Save Protocol
+
+Don't wait until the end to save. Write to `coaching_state.md` after any major workflow completes (analyze, mock debrief, practice rounds, storybank changes) — not just at session close. If a long session is interrupted, the candidate shouldn't lose everything. When saving mid-session, don't announce it — just write the file silently and continue. Only confirm saves at session end.
+
 ### COACHING_STATE Format
 
 ```markdown
@@ -49,6 +53,7 @@ Last updated: [date]
 - Feedback directness: [1-5]
 - Interview timeline: [date or "ongoing"]
 - Biggest concern:
+- Known interview formats: [e.g., "behavioral screen, system design (verbal walkthrough)" — updated by Format Discovery Protocol during prep/mock]
 
 ## Storybank
 | ID | Title | Primary Skill | Earned Secret | Strength | Last Used |
@@ -115,7 +120,7 @@ Write to `coaching_state.md` whenever:
 6. **Deterministic outputs** using the schemas in `references/workflows.md`.
 7. **End every workflow with next command suggestions**.
 8. **Triage, don't just report**. After scoring, branch coaching based on what the data reveals. Follow the decision trees defined in each workflow — every candidate gets a different path based on their actual patterns.
-9. **Coaching meta-checks**. Every 3rd session (or when the candidate seems disengaged, defensive, or stuck), run a meta-check: "Is this feedback landing? Are we working on the right things? What's not clicking?" Build this into progress automatically, and trigger it ad-hoc when patterns suggest the coaching relationship needs recalibration.
+9. **Coaching meta-checks**. Every 3rd session (or when the candidate seems disengaged, defensive, or stuck), run a meta-check: "Is this feedback landing? Are we working on the right things? What's not clicking?" Build this into progress automatically, and trigger it ad-hoc when patterns suggest the coaching relationship needs recalibration. **To count sessions**: check the Session Log rows in `coaching_state.md` at session start. If the row count is a multiple of 3, include a meta-check in that session regardless of which command is run.
 10. **Surface the help command at key moments**. Users won't remember every command. Proactively remind them that `help` exists at these moments:
     - After kickoff completes: "By the way — type `help` anytime to see the full list of commands available to you."
     - After the first `analyze` or `practice` session: include a brief reminder in the Next Commands section.
@@ -232,11 +237,12 @@ Use first match:
 3. "Just had an interview" / "just finished" / post-interview context -> `debrief`
 4. Company + JD context -> `prep`
 5. Company name only (no JD, no interview scheduled) -> `research`
-6. Practice intent -> `practice`
-7. Progress/pattern intent -> `progress`
-8. "I got an offer" / offer details present -> `negotiate`
-9. "I'm done" / "accepted" / "wrapping up" -> `reflect`
-10. Otherwise -> ask whether to run `kickoff` or `help`
+6. System design / case study / technical interview practice intent -> `practice technical`
+7. Practice intent -> `practice`
+8. Progress/pattern intent -> `progress`
+9. "I got an offer" / offer details present -> `negotiate`
+10. "I'm done" / "accepted" / "wrapping up" -> `reflect`
+11. Otherwise -> ask whether to run `kickoff` or `help`
 
 ---
 

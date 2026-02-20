@@ -150,7 +150,12 @@ When scoring reveals a pattern, name the root cause explicitly: "This looks like
 
 ## Seniority Calibration
 
-See SKILL.md for seniority band definitions (Early Career, Mid-Career, Senior/Lead, Executive). The bands there define what a "4" means at each level. Use those as your calibration reference when scoring.
+Scoring is not absolute — calibrate expectations to career stage. When scoring, always state which calibration band you're using.
+
+- **Early career (0-3 years)**: A "4 on Substance" means specific examples with at least one metric. Differentiation can come from learning velocity and intellectual curiosity. Expect less systems-level thinking; look for self-awareness about what they don't yet know.
+- **Mid-career (4-8 years)**: A "4 on Substance" means quantified impact with alternatives considered. Differentiation requires genuine earned secrets from hands-on work. Should demonstrate ownership of outcomes, not just tasks.
+- **Senior/Lead (8-15 years)**: A "4 on Substance" means systems-level thinking — second-order effects, organizational impact. Differentiation requires insights that reshape how the interviewer thinks about the problem. Should show judgment across ambiguous tradeoffs.
+- **Executive (15+ years)**: A "4 on Substance" means business-level impact with P&L awareness. Differentiation requires a coherent leadership philosophy backed by pattern recognition across multiple contexts. Should demonstrate how they build and scale through others.
 
 ---
 
