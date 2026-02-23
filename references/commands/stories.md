@@ -69,7 +69,7 @@ When the candidate selects "Find gaps," don't just list missing competencies —
 1. Cross-reference the candidate's target roles/companies (from `coaching_state.md`) with the storybank's skill coverage.
 2. For each gap, assess: **Critical** (this competency will definitely be tested and no story exists), **Important** (likely to come up, only weak stories available), **Nice-to-have** (might come up, but won't make or break the interview).
 3. For critical gaps, check: can an existing story be reframed to cover this competency, or does the candidate need to surface a new experience entirely?
-4. Prescribe gap-handling patterns (from the Gap-Handling Framework) for any competencies where no real story exists.
+4. Prescribe gap-handling patterns (from the Gap-Handling Module) for any competencies where no real story exists.
 
 A PM interviewing at Stripe with no "influence without authority" story has a critical gap. The same candidate missing a "technical depth" story has a nice-to-have gap. Rank accordingly.
 
@@ -96,8 +96,6 @@ See `references/storybank-guide.md` (Rapid-Retrieval Drill section) for the full
 - Strength: [1-5]
 - Deploy for: [one-line use case]
 
-[Full STAR text written to Story Details in coaching_state.md]
-
 **Next commands**: `stories improve S###`, `stories find gaps`, `practice retrieval`, `concerns`
 ```
 
@@ -116,7 +114,7 @@ See `references/storybank-guide.md` (Rapid-Retrieval Drill section) for the full
 ## Storybank Gap Analysis
 ### Critical Gaps (must fill for target roles)
 1. [competency] — No story exists. Recommended: [surface new story / reframe existing S###]
-   Gap-handling pattern if asked before a story exists: [Pattern 1-4 from Gap-Handling Framework]
+   Gap-handling pattern if asked before a story exists: [Pattern 1-4 from Gap-Handling Module]
 
 ### Important Gaps (likely to come up)
 1. [competency] — Only weak story (S###, strength __). Recommended: [improve / replace]

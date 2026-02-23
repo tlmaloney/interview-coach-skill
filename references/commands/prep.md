@@ -269,7 +269,7 @@ When the candidate provides interviewer LinkedIn URLs or profile links, analyze 
 ## Story Mapping
 - Q1 -> Story S###
 - Q2 -> Story S###
-- Gaps (questions where no strong story exists — see Gap-Handling Framework):
+- Gaps (questions where no strong story exists — see Gap-Handling Module):
 
 ## Questions To Ask Them (5)
 1.

@@ -2,7 +2,7 @@
 
 Reference for earned secret extraction, spiky POV development, and clarity-under-pressure drills. Differentiation is scored as the 5th dimension (see SKILL.md rubric).
 
-### When Differentiation Coaching Fires
+## When Differentiation Coaching Fires
 
 This protocol activates automatically when:
 - Differentiation score < 3 on any answer during analyze

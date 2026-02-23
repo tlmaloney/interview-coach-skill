@@ -4,7 +4,7 @@ These modules are active across all workflows. They are referenced from SKILL.md
 
 ---
 
-## Differentiation Layer (Always Active)
+## Differentiation Module (Always Active)
 
 Differentiation is not optional — it is the 5th scoring dimension applied to every answer. The reference material in `references/differentiation.md` provides the full protocol.
 
@@ -25,7 +25,7 @@ Differentiation coaching is integrated into `analyze`, `stories`, and `practice`
 
 ---
 
-## Gap-Handling Framework
+## Gap-Handling Module
 
 Every prep system assumes you'll have a story for every question. You won't. This framework coaches the critical skill of handling questions where you genuinely don't have a strong example.
 
@@ -114,7 +114,7 @@ Interview failure is frequently emotional, not intellectual. This module address
 **Mid-Interview Recovery:**
 - **"I bombed that answer" spiral**: Teach the candidate to notice the spiral and interrupt it. Script: "That answer wasn't my best. I'm going to give this next one my full attention." The interviewer has already moved on — the candidate should too.
 - **Lost your train of thought**: "Let me take a second to organize my thoughts" is perfectly acceptable. Silence is better than rambling.
-- **Unexpected question panic**: Default to Pattern 1 from the Gap-Handling Framework. Buy 5 seconds with "That's a great question — let me think about the best example for a moment."
+- **Unexpected question panic**: Default to Pattern 1 from the Gap-Handling Module. Buy 5 seconds with "That's a great question — let me think about the best example for a moment."
 
 **Post-Interview Processing:**
 - **Don't catastrophize**: Teach the candidate that their assessment immediately after is usually wrong — both too harsh and too confident on different questions.
@@ -129,7 +129,7 @@ Interview failure is frequently emotional, not intellectual. This module address
 
 ---
 
-## Cultural and Linguistic Awareness
+## Cultural and Linguistic Awareness Module
 
 Non-native English speakers and candidates from different cultural backgrounds face specific interview challenges that are NOT skill deficits. Misdiagnosing cultural communication patterns as coaching gaps wastes time and undermines confidence.
 
@@ -144,7 +144,7 @@ If scoring reveals patterns consistent with cultural communication differences (
 
 ---
 
-## Cross-Command Dependency Guide
+## Cross-Command Dependency Module
 
 Commands produce better output when they have data from other commands. This table shows what each command can do with and without various pieces of coaching state. Use this to suggest prerequisites when a command would benefit from missing data.
 
@@ -160,7 +160,7 @@ Commands produce better output when they have data from other commands. This tab
 | `stories` | Resume analysis from kickoff (for story seeds) | Resume (uses reflective prompts instead) | — |
 | `concerns` | Resume analysis, storybank, previous `analyze` results, JD | All (generates from candidate input only) | — |
 | `questions` | Prep data, interviewer intel, interview stage | All (generates generic questions) | — |
-| `hype` | Score history, storybank, prep brief, concerns, Resume Analysis | All (falls back to resume-based hype — explicitly flagged) | — |
+| `hype` | Score history, storybank, prep brief, concerns, resume analysis | All (falls back to resume-based hype — explicitly flagged) | — |
 | `thankyou` | Debrief data, Interview Loops, interviewer intel | All (asks candidate for callbacks) | — |
 | `progress` | 3+ scored sessions, outcome data | Works with 1-2 sessions (reduced — see minimum data thresholds) | At least 1 scored session |
 | `negotiate` | Interview Loops, outcome log | Both (collects offer details fresh) | Offer details |

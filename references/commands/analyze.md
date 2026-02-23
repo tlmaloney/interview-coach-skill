@@ -59,7 +59,6 @@ After scoring, identify bottleneck dimensions and branch. Most candidates have m
 ```markdown
 ### Q#
 - Scores: Substance __ / Structure __ / Relevance __ / Credibility __ / Differentiation __
-- Forward Signal: Yes / Maybe / No
 - What worked:
 - Biggest gap:
 - Root cause pattern (if detected):
@@ -90,10 +89,9 @@ When rewriting:
 - Credibility:
 - Differentiation:
 - Calibration band used:
-- Overall Hiring Signal: Strong Hire / Hire / Mixed / No Hire
+- Hire Signal: Strong Hire / Hire / Mixed / No Hire
 
 ## Triage Decision
-<!-- After scoring, branch the debrief based on what the data reveals -->
 - Primary bottleneck dimension:
 - Coaching path chosen: [see decision tree below]
 
@@ -121,8 +119,15 @@ When rewriting:
 - Retire:
 - Add:
 
+## Carry Forward
+- [One strong behavior from this interview to maintain]
+
 ## Priority Move (Next 72 Hours)
 - One highest-leverage action:
+
+## Reflection Prompts
+- How does this feedback compare to your gut feeling about the interview?
+- Of the growth areas above, which feels most within your control?
 
 ## Confidence
 - Score confidence:

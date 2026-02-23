@@ -129,7 +129,7 @@ These examples show what good skill output looks like. Use them as calibration a
 ### Self-Assessment Delta
 - Candidate rated themselves: ~3 on Credibility
 - Coach scored: 3 on Credibility
-- Calibration gap: Accurate on this one. Good self-awareness. (Note: across 4 prior rounds, candidate has consistently rated Structure 1 point higher than coach scores — this pattern hasn't surfaced here but is tracked in COACHING_STATE.)
+- Calibration gap: Accurate on this one. Good self-awareness. (Note: across 4 prior rounds, candidate has consistently rated Structure 1 point higher than coach scores — this pattern hasn't surfaced here but is tracked in `coaching_state.md`.)
 
 ### Next Round Adjustment
 - Try this single change: When interrupted with pushback, respond in ONE sentence that acknowledges and redirects, then continue your story. Practice: "Fair point — here's what makes this different: [one sentence]. So what I did was..." No more than 15 seconds on the pushback response.
@@ -413,7 +413,7 @@ The pattern here is clear and consistent with what we saw in practice: you skip 
 ```markdown
 ### Q2: "Tell me about a time you had to influence a decision without direct authority."
 - Scores: Substance 4 / Structure 4 / Relevance 4 / Credibility 3 / Differentiation 3
-- Forward Signal: Yes
+- Hire Signal contribution: Positive
 - What worked: Strong specific example — you named the VP you influenced, the data you brought, and the meeting where the decision turned. Front-loaded the outcome ("I changed the roadmap priority for Q3") before the backstory.
 - Biggest gap: Credibility dips because you said "the team eventually came around" without explaining HOW you influenced them. The mechanism of influence is exactly what this question tests.
 - Root cause pattern: Reflexive "we" framing — "we aligned on the new direction" obscures that YOU drove the alignment.
@@ -425,7 +425,7 @@ The pattern here is clear and consistent with what we saw in practice: you skip 
 
 ### Q4: "Describe a situation where you disagreed with your manager's decision."
 - Scores: Substance 2 / Structure 3 / Relevance 2 / Credibility 2 / Differentiation 1
-- Forward Signal: No
+- Hire Signal contribution: Negative
 - What worked: You structured the answer clearly — setup, disagreement, resolution. The bones were there.
 - Biggest gap: Relevance. You described a situation where you "pushed back" but ultimately agreed your manager was right. That's a challenge story, not a disagreement story. The question specifically asks about disagreement — they want to know what happens when you think the boss is wrong AND you still think so after the conversation.
 - Root cause pattern: Conflict avoidance — you selected a "safe" disagreement where you were the one who changed their mind, which avoids showing real tension.

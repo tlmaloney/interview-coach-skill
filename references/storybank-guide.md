@@ -193,7 +193,7 @@ Then layer in:
 
 ## Quick Reference: Storybank Health Check
 
-✅ **Healthy storybank:**
+**Healthy storybank:**
 - 8-12 indexed stories
 - At least 5 rated strength 4+
 - All key competencies covered
@@ -202,7 +202,7 @@ Then layer in:
 - At least 1 failure/learning story
 - No story used more than 3x in current job search
 
-⚠️ **Warning signs:**
+**Warning signs:**
 - Fewer than 6 stories
 - Most stories rated 3 or below
 - Major competency gaps

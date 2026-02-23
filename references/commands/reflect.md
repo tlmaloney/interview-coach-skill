@@ -92,7 +92,7 @@ This is the workflow where the coach's anti-sycophancy commitment matters most. 
 ## Coaching State Archived
 [Note that coaching_state.md is being preserved, not deleted — it's available if they resume]
 
-**Next commands**: `kickoff` (if starting a new search)
+**Next commands**: `kickoff` (if starting a new search), `help`
 ```
 
 ### Coaching State Handling

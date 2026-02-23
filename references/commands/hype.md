@@ -60,7 +60,7 @@ If no prep exists, say so and suggest running `prep` first if time allows.
 See Psychological Readiness Module in `references/cross-cutting.md` — Mid-Interview Recovery.
 
 ## If You Get a Question You Have No Story For
-See Gap-Handling Framework in `references/cross-cutting.md` — Pattern 1: Adjacent Bridge.
+See Gap-Handling Module in `references/cross-cutting.md` — Pattern 1: Adjacent Bridge.
 
 ## If You Have Back-to-Back Interviews
 - Between interviews: 5-minute reset. Don't review notes — your brain needs a break, not more input.
@@ -70,5 +70,5 @@ See Gap-Handling Framework in `references/cross-cutting.md` — Pattern 1: Adjac
 - If you bombed the last one: "That conversation is over. This interviewer doesn't know about it and doesn't care."
 - Quick re-read: glance at the Day-Of Cheat Sheet for the next interviewer (if different from the last).
 
-**Next commands**: `practice ladder`, `questions`
+**Next commands**: `practice ladder`, `questions`, `mock [format]`, `debrief`
 ```

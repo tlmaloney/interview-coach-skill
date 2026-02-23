@@ -48,7 +48,7 @@ Or [download it as a ZIP](https://github.com/noamseg/interview-coach-skill/archi
 2. Rename the skill file so Claude Code auto-loads it:
 
 ```bash
-mv SKILL.md CLAUDE.md
+cp SKILL.md CLAUDE.md
 ```
 
 3. Open the folder in Claude Code on Desktop and say `kickoff`.
@@ -268,7 +268,6 @@ Choose during `kickoff`. You can switch later.
 interview-coach-skill/
 ├── SKILL.md                            # Core skill — rename to CLAUDE.md to activate
 ├── README.md                           # This file
-├── TESTING_GUIDE.md                    # Guide for testing the skill
 ├── LICENSE                             # MIT License
 ├── coaching_state.md                   # Created on first kickoff (persistent memory, auto-saved)
 └── references/

@@ -258,8 +258,8 @@ INTERVIEW: [Company] - [Role] - [Date]
 
 OVERALL SCORES:
 Substance: ___ | Structure: ___ | Relevance: ___ | Credibility: ___ | Differentiation: ___
-Calibration band: [early career / mid-career / senior / executive]
-Hiring Manager Assessment: Strong Hire / Hire / Mixed / No Hire
+Calibration band: [early career / mid-career / senior/lead / executive]
+Hire Signal: Strong Hire / Hire / Mixed / No Hire
 
 PRIMARY BOTTLENECK: [dimension]
 TRIAGE PATH: [coaching path chosen per Post-Scoring Decision Tree in references/commands/analyze.md]

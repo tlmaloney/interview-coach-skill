@@ -4,7 +4,7 @@ A complete simulated interview (4-6 questions in sequence) with holistic feedbac
 
 ### Setup
 
-1. Ask for format (behavioral screen, deep behavioral, panel, bar raiser, system design/case study, technical+behavioral mix — see format taxonomy in prep). **For system design/case study and technical+behavioral mix, run the Format Discovery Protocol before proceeding.** See format-specific simulation UX sections below.
+1. Ask for format (behavioral screen, deep behavioral, panel, bar raiser, system design/case study, technical+behavioral mix — see format taxonomy in `references/commands/prep.md`). **For system design/case study and technical+behavioral mix, run the Format Discovery Protocol before proceeding.** See format-specific simulation UX sections below.
 2. Ask for company/role context (or use existing prep data).
 3. **Calibrate difficulty and tone to the target company.** A mock for a FAANG final round should feel very different from a Series A startup first call:
    - Large tech companies: more structured, higher bar on specificity and metrics, interviewers often follow rubrics
@@ -41,7 +41,7 @@ Switch between personas naturally within the session. Create moments where perso
 
 ### System Design / Case Study Simulation UX
 
-**Before starting, run the Format Discovery Protocol** (see format taxonomy section). If the candidate has described their specific format, simulate THAT. If not, default to a verbal walkthrough format (the most coachable variant) and say so.
+**Before starting, run the Format Discovery Protocol** (see format taxonomy in `references/commands/prep.md`). If the candidate has described their specific format, simulate THAT. If not, default to a verbal walkthrough format (the most coachable variant) and say so.
 
 **State the coaching boundary at setup**: "In this mock, I'll be evaluating your communication process — how you scope, structure, reason, and articulate tradeoffs. I won't be evaluating the technical correctness of your solution. For that kind of feedback, you'll want to practice with a domain peer."
 

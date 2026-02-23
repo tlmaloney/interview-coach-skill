@@ -60,7 +60,7 @@ If they accept, run a mini pushback drill (2-3 rounds) focused on the top 1-2 co
 - Round 1: Direct question version
 - Round 2: Subtle probe version
 - Round 3: Follow-up challenge after their counter
-Score each round and record to coaching state.
+Score each round and add to Score History in `coaching_state.md` (Type: practice). Update Session Log with the concern-focused drill.
 
 ### Concern Tracking
 
